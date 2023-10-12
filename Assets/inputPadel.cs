@@ -1,46 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
-public class inputPadel : MonoBehaviour
+public class inputPaddle : MonoBehaviour
 {
     public float speed = 3f;
     public string leftOrRight;
-    // Start is called before the first frame update
-    void Start()
+
+    
+    void setKeyAndMovement(KeyCode up, KeyCode down)
     {
-        
+        if (Input.GetKey(up) && transform.position.y <= 3.6f)
+        {
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }
+        else if (Input.GetKey(down) && transform.position.y >= -3.6f)
+        {
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
+        }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        if (leftOrRight == "Left") 
+      
+        if (leftOrRight == " left ")
         {
-            if (Input.GetKey(KeyCode.W))
-            {
-             transform.Translate(Vector3.up * speed * Time.deltaTime);
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-             transform.Translate(Vector3.down * speed * Time.deltaTime);
-            }
+            setKeyAndMovement(KeyCode.W, KeyCode.S);
         }
-        else if(leftOrRight == "Right")
+        else if (leftOrRight == " right ")
         {
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-             transform.Translate(Vector3.up * speed * Time.deltaTime);
-             
-
-            }
-            else if (Input.GetKey(KeyCode.DownArrow))
-            {
-
-              transform.Translate(Vector3.down * speed * Time.deltaTime);
-            }
+            setKeyAndMovement(KeyCode.UpArrow, KeyCode.DownArrow);
         }
-    } 
+
+    }
 }
