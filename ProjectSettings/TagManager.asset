@@ -6,6 +6,8 @@ TagManager:
   tags:
   - horizantalwall
   - verticalwall
+  - leftwal
+  - rightwal
   layers:
   - Default
   - TransparentFX
