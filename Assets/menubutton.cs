@@ -5,12 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class buttonScript : MonoBehaviour
 {
-    public void startOnePlayer()
+   public void startOnePlayer()
     {
         SceneManager.LoadScene("pongPlayerOne");
     }
     public void startTwoPlayer()
     {
         SceneManager.LoadScene("pongTwoPlayers");
+    }
+
+    public void QuiteGame() 
+    {
+    Application.Quit();  
     }
 }

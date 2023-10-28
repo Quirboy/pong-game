@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 1433835459}
   - component: {fileID: 1433835458}
   - component: {fileID: 1433835457}
-  - component: {fileID: 1433835456}
+  - component: {fileID: 1433835460}
   m_Layer: 0
   m_Name: Right
   m_TagString: Player
@@ -889,20 +889,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1433835456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433835455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc30b223635871e4fa1803a1c569a37a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  leftOrRight: right
 --- !u!61 &1433835457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1015,6 +1001,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1433835460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433835455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7272bebcd2988e249ac7d8ef4b27c7ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ySpeed: 3
+  ball: {fileID: 890716387}
 --- !u!1 &1492623847
 GameObject:
   m_ObjectHideFlags: 0
