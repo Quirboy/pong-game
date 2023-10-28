@@ -8,7 +8,7 @@ public class inputPaddle : MonoBehaviour
     public float speed = 3f;
     public string leftOrRight;
 
-    
+    //function that handles movement and has variables for up and down keycode?
     void setKeyAndMovement(KeyCode up, KeyCode down)
     {
         if (Input.GetKey(up) && transform.position.y <= 3.6f)
@@ -21,15 +21,15 @@ public class inputPaddle : MonoBehaviour
         }
     }
 
-    
+    // Update is called once per frame
     void Update()
     {
-      
-        if (leftOrRight == " left ")
+        //Change within Unity if it's left or the right paddle
+        if (leftOrRight == "left")
         {
             setKeyAndMovement(KeyCode.W, KeyCode.S);
         }
-        else if (leftOrRight == " right ")
+        else if (leftOrRight == "right")
         {
             setKeyAndMovement(KeyCode.UpArrow, KeyCode.DownArrow);
         }
