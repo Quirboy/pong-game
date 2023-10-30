@@ -8,11 +8,14 @@ TagManager:
   - verticalwall
   - leftwal
   - rightwal
+  - Wall
+  - Paddle
+  - Ball
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - b
   - Water
   - UI
   - 
@@ -44,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: b
+    uniqueID: 3298363029
     locked: 0
