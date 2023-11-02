@@ -13,7 +13,14 @@ public class buttonScript : MonoBehaviour
     {
         SceneManager.LoadScene("pongTwoPlayers");
     }
-
+    public void moreBalls()
+    {
+        SceneManager.LoadScene("moreBalls");
+    }
+    public void botVSbot()
+    {
+        SceneManager.LoadScene("bot Vs bot");
+    }
     public void QuiteGame() 
     {
     Application.Quit();  
